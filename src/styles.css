@@ -16,5 +16,91 @@ body {
   /*
    * CSS image reference example.
    */
-  background-image: url('./images/bg-pattern.png');
+  /* background-image: url('./images/bg-pattern.png'); */
+  background-image: url('./images/watercolour.png');
+  background-size: 100%;
+  background-color: #fff;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.search-form input {
+  font-size: 18px;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.search-form-btn {
+  margin-left: 10px;
+}
+
+
+.button {
+  font-size: 18px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.load-more-btn {
+  display: block;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 20px auto;
+}
+
+.gallery {
+padding: 0;
+margin: 0;
+list-style: none;
+max-width: calc(100% - 64px);
+margin-left: auto;
+margin-right: auto;
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+grid-gap: 24px;
+}
+
+.gallery-item {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo-card {
+  background-color: #fff;
+  border: 2px;
+  border-color: gray;
+  padding: 5px;
+  /* width: 350px; */
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+}
+
+.button.is-hidden {
+  display: none;
 }
