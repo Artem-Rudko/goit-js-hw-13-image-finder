@@ -29,7 +29,7 @@ function onLoadMore(e) {
     this.pageNumber +=1;
     getPhotoApi.fetchPhotos().then(renderPhotoGallery);
     window.scrollTo({
-        top: document.documentElement.scrollHeight,
+        top: document.body.scrollHeight,
         behavior: 'smooth',
       });
 }
