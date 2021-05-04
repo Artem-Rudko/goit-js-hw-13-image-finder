@@ -16,22 +16,20 @@ refs.searchForm.addEventListener('submit', onSearch);
 refs.loadMoreBtn.addEventListener('click', onLoadMore);
 
 
-function onSearch(e) {
-    e.preventDefault();
+function onSearch(event) {
+    event.preventDefault();
     clearPhotoGallery();
-    getPhotoApi.query = e.currentTarget.elements.query.value;
+    getPhotoApi.query = event.currentTarget.elements.query.value;
     getPhotoApi.resetPageNumber();
     getPhotoApi.fetchPhotos().then(renderPhotoGallery);
     refs.loadMoreBtn.classList.remove('is-hidden');
 };
 
-function onLoadMore(e) {
+function onLoadMore(event) {
     this.pageNumber +=1;
     getPhotoApi.fetchPhotos().then(renderPhotoGallery);
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth',
-      });
+    // scrollDown();
+    setTimeout(scrollDown, 1000);
 }
 
 function renderPhotoGallery(hits) {
@@ -40,4 +38,11 @@ function renderPhotoGallery(hits) {
 
 function clearPhotoGallery() {
     refs.photoGallery.innerHTML = '';
+}
+
+function scrollDown() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth',
+    });
 }
