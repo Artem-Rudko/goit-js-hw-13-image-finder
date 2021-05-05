@@ -42,7 +42,7 @@ function clearPhotoGallery() {
 
 function scrollDown() {
     window.scrollTo({
-        top: document.body.scrollHeight,
+        top: document.body.scrollHeight-2900,
         behavior: 'smooth',
     });
 }
